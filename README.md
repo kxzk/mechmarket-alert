@@ -28,7 +28,8 @@ while True:
     - Twilio free trial gives you $15
     - Each text costs about a cent
 
-* Need to create the following environment variables:
+* Need to create the following environment variables (below are just
+    examples):
 
 ```bash
 # Reddit
