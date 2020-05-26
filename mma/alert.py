@@ -17,12 +17,12 @@ class MechMarketAlert:
         self.alert_size = alert_size
         self.sent_alerts = []
 
-    def check_alerts_size(self) -> None:
+    def __check_alerts_size(self) -> None:
         if len(self.sent_alerts) > self.alert_size:
             self.sent_alerts = self.sent_alerts[-self.alert_size :]
 
     def get_lucky(self, number_of_posts: int = 20) -> None:
-        self.check_alerts_size()
+        self.__check_alerts_size()
         posts = self.mech_market.new_posts(number_of_posts)
         for post in posts:
             if (
