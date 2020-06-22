@@ -1,6 +1,6 @@
+from twilio.base.exceptions import TwilioRestException
 from twilio.rest import Client
 from twilio.rest.api.v2010.account.message import MessageInstance
-from twilio.base.exceptions import TwilioRestException
 
 
 class SMS:
