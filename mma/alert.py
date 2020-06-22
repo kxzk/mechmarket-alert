@@ -38,6 +38,5 @@ class MechMarketAlert:
                 and post.title not in self.sent_alerts
             ):
                 message = f"FOUND ITEM - {post.url}"
-                print(message)
                 self.sms.send_text(self.my_number, self.twilio_number, message)
                 self.sent_alerts.append(post.title)
