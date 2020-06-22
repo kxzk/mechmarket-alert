@@ -1,15 +1,22 @@
+from typing import List, Optional, Set
+
+from .config import reddit_config, twilio_config
+from .helpers import contains_any
 from .reddit import MechMarket
 from .sms import SMS
-from .config import reddit_config, twilio_config
 
 
 class MechMarketAlert:
     def __init__(
-        self, keyword: str, twilio_number: str, your_number: str, alert_size: int = 10,
+        self,
+        keywords: Set[str],
+        twilio_number: str,
+        my_number: str,
+        alert_size: int = 10,
     ):
-        self.keyword = keyword
+        self.keywords = keywords
         self.twilio_number = twilio_number
-        self.your_number = your_number
+        self.my_number = my_number
 
         self.mech_market = MechMarket(**reddit_config)
         self.sms = SMS(**twilio_config)
@@ -27,9 +34,10 @@ class MechMarketAlert:
         for post in posts:
             if (
                 post.link_flair_text == "Selling"
-                and self.keyword.upper() in post.title.upper()
+                and contains_any(post.title, self.keywords)
                 and post.title not in self.sent_alerts
             ):
-                message = f"FOUND - {self.keyword.upper()}: {post.url}"
-                self.sms.send_text(self.your_number, self.twilio_number, message)
+                message = f"FOUND ITEM - {post.url}"
+                print(message)
+                self.sms.send_text(self.my_number, self.twilio_number, message)
                 self.sent_alerts.append(post.title)
