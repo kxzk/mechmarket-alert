@@ -13,7 +13,9 @@ import time
 
 from mma import MechMarketAlert
 
-mma = MechMarketAlert("GMK Striker", "+12073948899", "+14244780093")
+items = {"GMK Camping", "GMK Striker"}
+
+mma = MechMarketAlert(items, "+12073948899", "+14244780093")
 
 while True:
     try:
