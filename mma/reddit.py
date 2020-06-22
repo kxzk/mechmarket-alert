@@ -1,7 +1,7 @@
+from typing import Generator
+
 from praw import Reddit
 from praw.models.reddit.submission import Submission
-
-from typing import List
 
 
 class MechMarket:
@@ -29,5 +29,5 @@ class MechMarket:
 
         self.subreddit = self.reddit.subreddit("mechmarket")
 
-    def new_posts(self, number_of_posts: int) -> List[Submission]:
-        return [post for post in self.subreddit.new(limit=number_of_posts)]
+    def new_posts(self, number_of_posts: int) -> Generator[None, None, Submission]:
+        return (post for post in self.subreddit.new(limit=number_of_posts))
