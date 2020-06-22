@@ -1,4 +1,4 @@
-from typing import List, Optional, Set
+from typing import Set
 
 from .config import reddit_config, twilio_config
 from .helpers import contains_any
