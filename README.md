@@ -4,7 +4,7 @@
 
 ![banner](https://images.squarespace-cdn.com/content/v1/563c788ae4b099120ae219e2/1521460872680-FVPBLJYICSA4W4ZQ0M50/ke17ZwdGBToddI8pDm48kJRqFJ19D4P4EwsC9z3fiewUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2dkV64dCjSK7Zaaf7dwPYPO_gHf_vjqrS5WJoq1nmwotrP7cJNZlDXbgJNE9ef52e8w/RAMA-M60-A-03.658.jpg)
 
-![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat-square) [![](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/release/python-380/)
+![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat-square) [![](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/release/python-380/) [![Build Status](https://travis-ci.org/kadekillary/mechmarket-alert.svg?branch=master)](https://travis-ci.org/kadekillary/mechmarket-alert) [![codecov](https://codecov.io/gh/kadekillary/mechmarket-alert/branch/master/graph/badge.svg)](https://codecov.io/gh/kadekillary/mechmarket-alert)
 
 ## Example Usage
 
