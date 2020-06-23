@@ -1,2 +1,5 @@
 twilio
 praw
+pytest
+pytest-cov
+codecov
